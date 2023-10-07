@@ -1,4 +1,4 @@
-{% set version = '1.0.3' %}
+{% set version = "1.0.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/GFA_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/GFA/GFA_{{ version }}.tar.gz
-  sha256: 0357b163e83662d4e8a229a27d377226ce8f84afc20eafc0cd8c47dab1de5183
+  sha256: e62f3656a7b8bcf9bacd4690ca76fa46d6cc95748bb760a8b0ffe58e32c10926
 
 build:
   noarch: generic
-  merge_build_host: True  # [win]
-  number: 1004
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -36,13 +36,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=GFA
   license: MIT
-  summary: Factor analysis implementation for multiple data sources, i.e., for groups of variables.
-    The whole data analysis pipeline is provided, including functions and recommendations
-    for data normalization and model definition, as well as missing value prediction
-    and model visualization. The model group factor analysis (GFA) is inferred with
-    Gibbs sampling, and it has been presented originally by Virtanen et al. (2012),
-    and extended in Klami et al. (2015) <DOI:10.1109/TNNLS.2014.2376974> and Bunte et
-    al. (2016) <DOI:10.1093/bioinformatics/btw207>; for details, see the citation info.
+  summary: Factor analysis implementation for multiple data sources, i.e., for groups of variables. The whole data analysis pipeline is provided, including functions and recommendations for data normalization and model definition, as well as missing value prediction and model visualization. The model group factor analysis
+    (GFA) is inferred with Gibbs sampling, and it has been presented originally by Virtanen et al. (2012), and extended in Klami et al. (2015) <DOI:10.1109/TNNLS.2014.2376974> and Bunte et al. (2016) <DOI:10.1093/bioinformatics/btw207>; for details, see the citation info.
   license_family: MIT
   license_file: LICENSE
 

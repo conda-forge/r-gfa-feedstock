@@ -1,4 +1,4 @@
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/GFA_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/GFA/GFA_{{ version }}.tar.gz
-  sha256: e62f3656a7b8bcf9bacd4690ca76fa46d6cc95748bb760a8b0ffe58e32c10926
+  sha256: 4d75b1effb0e31821b07386a900cf68e304c9925c3f2226c45ad2cae4450b7d1
 
 build:
   noarch: generic
